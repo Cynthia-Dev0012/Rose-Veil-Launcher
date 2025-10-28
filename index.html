@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Rose Veil Launcher</title>
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; script-src 'self';">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom titlebar -->
+  <div class="titlebar" style="-webkit-app-region: drag;">
+    <div class="title" id="titleText">Rose Veil Launcher</div>
+    <div class="window-controls" style="-webkit-app-region: no-drag;">
+      <button id="btnMin" class="win-btn" aria-label="Minimize">—</button>
+      <button id="btnClose" class="win-btn close" aria-label="Close">×</button>
+    </div>
+  </div>
+
+  <div class="app">
+    <div class="left">
+      <div class="logo-wrap">
+        <img id="logoImg" class="logo" alt="Game Logo" />
+        <div id="patchBadge" class="version-badge">Patch: …</div>
+      </div>
+
+      <div class="actions">
+        <button id="btnLaunch" class="primary">Launch Game</button>
+
+        <div class="patch-block">
+          <div class="row">
+            <button id="btnPatch" class="accent">Patch Game</button>
+            <div id="patchPhase" class="muted"></div>
+          </div>
+          <div class="progress"><div id="patchBar" class="progress-bar"></div></div>
+          <div id="patchInfo" class="muted small"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="news-head"><h1>News</h1></div>
+      <div id="newsList" class="news-list"></div>
+    </div>
+  </div>
+
+  <div id="appVersion" class="app-version">v0.0.0</div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

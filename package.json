@@ -1,0 +1,8 @@
+{
+  "name": "tiny-launcher-plus",
+  "version": "1.4.0",
+  "main": "main.js",
+  "private": true,
+  "scripts": { "start": "electron ." },
+  "dependencies": { "electron": "^31.2.0" }
+}

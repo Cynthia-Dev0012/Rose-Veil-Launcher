@@ -1,0 +1,26 @@
+{
+  "appTitle": "Rose Veil Launcher",
+  "logoPath": "assets/logo.png",
+
+  "exe": {
+    "name": "MyGame.exe",
+    "sha256Whitelist": []
+  },
+
+  "news": {
+    "url": "https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/news.json",
+    "timeoutMs": 12000
+  },
+
+  "patch": {
+    "manifestUrl": "https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/nsfw_manifest.json",
+    "destSubdir": "DLC/nsfw"   
+   
+  },
+
+  "window": {
+    "width": 860,
+    "height": 540,
+    "resizable": false
+  }
+}
