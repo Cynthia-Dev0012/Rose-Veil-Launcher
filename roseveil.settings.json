@@ -3,24 +3,34 @@
   "logoPath": "assets/logo.png",
 
   "exe": {
-    "name": "MyGame.exe",
+    "name": "The Beekeeper.exe",
     "sha256Whitelist": []
   },
 
   "news": {
-    "url": "https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/news.json",
+    "url": "https://raw.githubusercontent.com/Cynthia-Dev0012/Patching-test/main/news.json",
     "timeoutMs": 12000
   },
 
   "patch": {
-    "manifestUrl": "https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/nsfw_manifest.json",
+    "manifestUrl": "https://raw.githubusercontent.com/Cynthia-Dev0012/Patching-test/main/nsfw_manifest.json",
     "destSubdir": "DLC/nsfw"   
    
   },
 
+  "launcher": {
+    "updateManifestUrl": "https://<your-site-or-gh-pages>/launcher_manifest.json"
+  },
+  "mods": {
+    "subdir": "Mods"            
+  },
+    "dev": {
+    "skipChecksum": true
+  },
+
   "window": {
     "width": 860,
-    "height": 540,
+    "height": 600,
     "resizable": false
   }
 }

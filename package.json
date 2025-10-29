@@ -1,6 +1,6 @@
 {
-  "name": "tiny-launcher-plus",
-  "version": "1.4.0",
+  "name": "rose-veil-launcher",
+  "version": "1.9.0",
   "main": "main.js",
   "private": true,
   "scripts": { "start": "electron ." },

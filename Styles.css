@@ -43,6 +43,19 @@ html,body{ height:100%; margin:0; background:var(--bg); color:var(--text);
   border-color: #7a2c2c;
 }
 
+.offline-banner{
+  background:#2a2133; color:#f1e9ff; border-bottom:1px solid var(--border);
+  padding:6px 12px; font-size:12px;
+}
+
+button.ghost{
+  background:transparent; border-color:var(--border); width:auto;
+}
+button.danger{
+  background:linear-gradient(180deg,#ff2b2b22,#ff2b2b0d); border-color:#7a2c2c; color:#ffd7d7; width:auto;
+}
+.nsfw-controls{ margin-top:12px; display:flex; gap:8px; }
+
 .app{
   display:grid; grid-template-columns: 360px 1fr; gap:16px; padding:18px; height:calc(100% - 36px);
 }
@@ -98,3 +111,15 @@ button.accent{ background:linear-gradient(180deg,var(--accent1),#0000); border-c
   background:#0f1320; border:1px solid var(--border); border-radius:8px; padding:3px 7px;
   pointer-events: none;
 }
+.update-banner{
+  background:#172839; border-bottom:1px solid var(--border); color:#d7e9ff;
+  padding:8px 12px; display:flex; align-items:center; gap:12px;
+}
+
+.setup-card{
+  position:absolute; inset:36px 18px 18px 18px; /* below titlebar */
+  background:var(--panel2); border:1px solid var(--border); border-radius:12px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  box-shadow:var(--shadow); text-align:center; gap:10px;
+}
+.setup-card h2{ margin:0; }

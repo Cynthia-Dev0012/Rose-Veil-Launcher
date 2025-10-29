@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Custom titlebar -->
+  <!-- Titlebar -->
   <div class="titlebar" style="-webkit-app-region: drag;">
     <div class="title" id="titleText">Rose Veil Launcher</div>
     <div class="window-controls" style="-webkit-app-region: no-drag;">
@@ -17,6 +17,22 @@
     </div>
   </div>
 
+  <div id="offlineBanner" class="offline-banner" style="display:none;">
+    You’re offline. News may be stale; launching still works.
+  </div>
+
+  <div id="updateBanner" class="update-banner" style="display:none;">
+  <span id="updateText">Launcher update available</span>
+  <button id="btnUpdate" class="accent">Update</button>
+</div>
+
+<div id="setupCard" class="setup-card" style="display:none;">
+  <h2>Set up your game</h2>
+  <p>Select the game executable to continue.</p>
+  <button id="btnChooseExe" class="primary" style="width:auto;">Select Game EXE</button>
+  <div id="setupStatus" class="muted small"></div>
+</div>
+
   <div class="app">
     <div class="left">
       <div class="logo-wrap">
@@ -24,16 +40,30 @@
         <div id="patchBadge" class="version-badge">Patch: …</div>
       </div>
 
+<div class="mods-block">
+  <button id="btnOpenMods" class="ghost">Open Mods Folder</button>
+</div>
+
+
       <div class="actions">
         <button id="btnLaunch" class="primary">Launch Game</button>
 
         <div class="patch-block">
           <div class="row">
             <button id="btnPatch" class="accent">Patch Game</button>
+            <button id="btnVerify" class="ghost">Verify Files</button>
             <div id="patchPhase" class="muted"></div>
           </div>
           <div class="progress"><div id="patchBar" class="progress-bar"></div></div>
-          <div id="patchInfo" class="muted small"></div>
+          <div class="row">
+            <div id="patchInfo" class="muted small" style="flex:1"></div>
+            <div id="verifyStatus" class="muted small"></div>
+          </div>
+        </div>
+
+        <div class="nsfw-controls">
+          <button id="btnNsfwToggle" class="ghost" data-state="enabled">Disable NSFW</button>
+          <button id="btnNsfwUninstall" class="danger">Uninstall NSFW</button>
         </div>
       </div>
     </div>
@@ -45,7 +75,5 @@
   </div>
 
   <div id="appVersion" class="app-version">v0.0.0</div>
-
   <script src="renderer.js"></script>
 </body>
-</html>
